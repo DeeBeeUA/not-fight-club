@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    //s
 
     // Подставляем имя
     if (yourName && nameStorage) {
