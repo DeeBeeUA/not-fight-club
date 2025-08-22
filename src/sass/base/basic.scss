@@ -127,3 +127,11 @@ body {
         color: darkorchid;
     }
 }
+
+.home__wrapper {
+    height: calc(100% - 78px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

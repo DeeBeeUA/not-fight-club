@@ -11,6 +11,8 @@ export default defineConfig({
                 registration: resolve(__dirname, 'index.html'),
                 home: resolve(__dirname, 'home.html'),
                 settings: resolve(__dirname, 'settings.html'),
+                character: resolve(__dirname, 'character.html'),
+                battle: resolve(__dirname, 'battle.html'),
                 // nested: resolve(__dirname, 'nested/index.html'),
             },
         },

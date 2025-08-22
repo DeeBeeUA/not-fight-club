@@ -6,16 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const editNameButton = document.querySelector('.edit-name');
     const nameStorage = localStorage.getItem('playerName');
     const navSetting = document.querySelector('.navigation__settings');
+    const navCharacter = document.querySelector('.navigation__user')
+    const navHome = document.querySelector('.navigation__home');
     const currentPage = window.location.pathname;
     const yourName = document.querySelector('.yourName');
+    const fightButton = document.querySelector('.home__button');
 
-    // Редирект (кроме settings.html)
-    if (!currentPage.endsWith('/settings.html')) {
-        if (nameStorage && !currentPage.endsWith('/home.html')) {
-            window.location.href = '/not-fight-club/home.html';
-        } else if (!nameStorage && currentPage !== '/not-fight-club/') {
-            window.location.href = '/not-fight-club/';
-        }
+    if (!nameStorage && currentPage !== '/not-fight-club/') {
+        window.location.href = '/not-fight-club/';
+    } else if (nameStorage && currentPage === '/not-fight-club/') {
+        window.location.href = '/not-fight-club/home.html'
+
     }
 
     // Кнопка регистрации
@@ -89,6 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
         navSetting.addEventListener('click', () => {
             window.location.href = '/not-fight-club/settings.html';
         });
+    }
+    // Кнопка перехода в персонажа
+    if (navCharacter) {
+        navCharacter.addEventListener('click', () => {
+            window.location.href = '/not-fight-club/character.html';
+        })
+    }
+
+    if (navHome) {
+        navHome.addEventListener('click', () => {
+            window.location.href = '/not-fight-club/home.html';
+        })
+    }
+
+
+    // Кнопка файт
+    if (fightButton) {
+        fightButton.addEventListener('click', () => {
+            window.location.href = '/not-fight-club/battle.html';
+        })
     }
 });
 
